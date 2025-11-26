@@ -12,7 +12,7 @@
     padding: 20px;
     transition: background 0.3s, color 0.3s;
     background: #aeebb3;
-    color: #a1eda8;
+    color: #578a5b;
   }
 
   body.dark {
@@ -46,9 +46,6 @@
 <div class="toggle-container">
   <button class="toggle-btn" id="themeToggle">☀︎</button>
 </div>
-
-<h2>Ejemplo de contenido</h2>
-<p>Esta caja cambia entre modo claro y oscuro usando JavaScript con icono bonito.</p>
 
 <script>
   const btn = document.getElementById("themeToggle");
