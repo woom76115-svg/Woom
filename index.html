@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modo Claro / Oscuro</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
+    background: #ffffff;
+    color: #000000;
+  }
+
+  body.dark {
+    background: #293826;
+    color: #293826;
+  }
+
+  .toggle-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background: #0077ff;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+</style>
+
+</head>
+<body>
+
+<button class="toggle-btn" onclick="toggleTheme()">Cambiar tema</button>
+
+<h2>Ejemplo de contenido</h2>
+<p>Esta caja cambia entre modo claro y oscuro usando JavaScript.</p>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle("dark");
+  }
+</script>
+
+</body>
+</html>
