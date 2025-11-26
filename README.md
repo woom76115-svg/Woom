@@ -7,42 +7,61 @@
 
 <style>
   body {
-    font-family: Arial, sans-serif;
+    font-family: Montserrat, sans-serif;
     margin: 0;
     padding: 20px;
     transition: background 0.3s, color 0.3s;
-    background: #ffffff;
-    color: #000000;
+    background: #aeebb3;
+    color: #a1eda8;
   }
 
   body.dark {
-    background: #1a1a1a;
-    color: #ffffff;
+    background: #263625;
+    color: #76ab6a;
   }
 
   .toggle-btn {
-    padding: 10px 20px;
-    cursor: pointer;
+    background: none;
     border: none;
-    background: #0077ff;
-    color: white;
-    border-radius: 8px;
-    font-size: 16px;
+    cursor: pointer;
+    font-size: 34px;
+    transition: transform 0.3s ease;
+  }
+
+  .toggle-btn:hover {
+    transform: scale(1.15);
+  }
+
+  /* Posición opcional si lo quieres en una esquina */
+  .toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
   }
 </style>
 
 </head>
 <body>
 
-<button class="toggle-btn" onclick="toggleTheme()">Cambiar tema</button>
+<div class="toggle-container">
+  <button class="toggle-btn" id="themeToggle">☀︎</button>
+</div>
 
 <h2>Ejemplo de contenido</h2>
-<p>Esta caja cambia entre modo claro y oscuro usando JavaScript.</p>
+<p>Esta caja cambia entre modo claro y oscuro usando JavaScript con icono bonito.</p>
 
 <script>
-  function toggleTheme() {
+  const btn = document.getElementById("themeToggle");
+
+  btn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
-  }
+
+    if (document.body.classList.contains("dark")) {
+      btn.textContent = "⏾"; // luna en modo oscuro
+    } else {
+      btn.textContent = "☀︎"; // sol en modo claro
+    }
+  });
 </script>
 
 </body>
